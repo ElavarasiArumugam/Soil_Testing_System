@@ -1,0 +1,65 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+  background-image: url('https://wallpapercave.com/wp/wp1886365.jpg');
+}
+
+h2 {
+  color: #162330;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #ecf0f163;
+  padding: 20px;
+  border-radius: 8px;
+  color:black;
+  font-weight: bolder;
+}
+
+fieldset {
+  border: 1px solid #02020298;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  color: #162330;
+}
+
+legend {
+  font-weight: bold;
+  color: #082745;
+}
+
+input, textarea, select {
+  width: 95%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #219150;
+}
+
+.sample-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}

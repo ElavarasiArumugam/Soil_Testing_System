@@ -1,0 +1,145 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #eaf2f8);
+  color: #2c3e50;
+  background-image: url('https://img.freepik.com/premium-photo/white-background-with-green-leaves-scattered-all-it_99233-24290.jpg?w=2000');
+  padding: 40px 20px;
+}
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.8em;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #7f8c8d;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dashboard-box {
+  width: 280px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #2c3e50;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.dashboard-box h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.dashboard-box p {
+  font-size: 1em;
+  color: #555;
+}
+
+.dashboard-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.farmer { border-top: 6px solid #27ae60; }
+.technician { border-top: 6px solid #2980b9; }
+.admin { border-top: 6px solid #8e44ad; }
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9em;
+  color: #95a5a6;
+}
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.dashboard-box {
+  position: relative;
+  width: 280px;
+  padding: 25px 20px 100px; /* extra bottom space for image */
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #2c3e50;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.dashboard-box::before {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.farmer::before {
+  background-image: url('https://cdn.pixabay.com/photo/2024/01/13/16/31/farmer-8506199_1280.jpg');
+}
+
+.technician::before {
+  background-image: url('https://img.freepik.com/premium-vector/cute-lab-technician-preparing-samples-cartoon-vector-icon_1022901-113149.jpg');
+}
+
+.admin::before {
+  background-image: url('https://clipground.com/images/admin-man-clipart.jpg');
+}
+
+.dashboard-box:hover::before {
+  transform: translateX(-50%) scale(1.1);
+}
+.dashboard-box::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <script src="assets/js/main.js"></script>
+</head>
+<body>
+  <h2>Admin Dashboard</h2>
+  <button onclick="loadCropData()">View Crop Database</button>
+  <div id="cropData"></div>
+
+  <script>
+    function loadCropData() {
+      fetch('/api/crops')
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById('cropData');
+          container.innerHTML = '<h3>Crops:</h3><ul>';
+          data.forEach(crop => {
+            container.innerHTML += `<li>${crop.crop_name} (pH: ${crop.ideal_pH_min}–${crop.ideal_pH_max})</li>`;
+          });
+          container.innerHTML += '</ul>';
+        });
+    }
+  </script>
+</body>
+</html>

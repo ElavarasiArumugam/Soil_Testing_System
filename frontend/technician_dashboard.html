@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Technician Dashboard</title>
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <script src="assets/js/api_calls.js"></script>
+</head>
+<body>
+  <h2>Assigned Soil Samples</h2>
+  <div id="sampleList">Loading samples...</div>
+
+  <h2>Enter Test Results & Recommendations</h2>
+  <form method="POST" action="/submit_test">
+    Sample ID: <input name="sample_id" required><br>
+
+    <fieldset>
+      <legend>Test Parameters</legend>
+      pH Level: <input name="ph" required><br>
+      Nitrogen: <input name="nitrogen" required><br>
+      Phosphorus: <input name="phosphorus" required><br>
+      Potassium: <input name="potassium" required><br>
+      Moisture: <input name="moisture" required><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Recommendation</legend>
+      Crop Name: <input name="crop_name" required><br>
+      Fertilizer Name: <input name="fertilizer_name" required><br>
+      Notes: <textarea name="notes"></textarea><br>
+    </fieldset>
+
+    <button type="submit">Submit Recommendation</button>
+  </form>
+</body>
+</html>

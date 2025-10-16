@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Farmer Dashboard</title>
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <script src="assets/js/form_validation.js"></script>
+</head>
+<body>
+  <h2>Submit Soil Sample</h2>
+  <form id="soilForm" method="POST" action="/submit_sample" onsubmit="return validateForm()">
+    <fieldset>
+      <legend>Farmer Info</legend>
+      Name: <input name="name" required><br>
+      Location: <input name="location" required><br>
+      Contact Type: 
+      <select name="contact_type">
+        <option value="phone">Phone</option>
+        <option value="email">Email</option>
+      </select><br>
+      Contact Value: <input name="contact_value" required><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Soil Sample</legend>
+      Sample Date: <input type="date" name="sample_date" required><br>
+      Sample Location: <input name="sample_location" required><br>
+      Remarks: <textarea name="remarks"></textarea><br>
+    </fieldset>
+
+    <button type="submit">Send to Technician</button>
+  </form>
+</body>
+</html>
