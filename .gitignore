@@ -1,0 +1,47 @@
+# Byte-compiled / Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Database files (SQLite)
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Python packaging
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment variables
+.env
+.env.local
+
+# Static files / frontend build outputs
+frontend/assets/build/
+frontend/assets/dist/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak

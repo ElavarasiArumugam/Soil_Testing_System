@@ -3,11 +3,12 @@
 <head>
   <title>Farmer Dashboard</title>
   <link rel="stylesheet" href="assets/css/dashboard.css">
-  <script src="assets/js/form_validation.js"></script>
 </head>
 <body>
   <h2>Submit Soil Sample</h2>
-  <form id="soilForm" method="POST" action="/submit_sample" onsubmit="return validateForm()">
+
+  <!-- This form now has an ID and will be handled by main.js -->
+  <form id="soilForm">
     <fieldset>
       <legend>Farmer Info</legend>
       Name: <input name="name" required><br>
@@ -29,5 +30,9 @@
 
     <button type="submit">Send to Technician</button>
   </form>
+
+  <!-- This now points to the single, correct script -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
+
