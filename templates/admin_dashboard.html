@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <div class="main-content"> <h2>Admin Dashboard</h2>
+        <button id="logoutBtn" style="float: right;">Logout</button>
+
+        <button id="loadCropsBtn">View Crop Database</button>
+        <button id="loadSamplesBtn">View All Soil Samples</button>
+
+        <hr style="clear: both; margin: 20px 0;"> <div id="cropDataContainer" style="display: none;"> <h3>Crop Database</h3>
+             <table id="cropTable">
+                 <thead>
+                     <tr>
+                         <th>Crop Name</th>
+                         <th>pH Range (min-max)</th>
+                         <th>N Range (min-max)</th>
+                         <th>P Range (min-max)</th>
+                         <th>K Range (min-max)</th>
+                         <th>Rainfall (min-max)</th>
+                     </tr>
+                 </thead>
+                 <tbody id="cropTableBody">
+                     </tbody>
+             </table>
+        </div>
+
+        <hr style="margin: 20px 0;"> <div id="sampleData">
+            </div>
+    </div> <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Farmer Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+  <h2>Submit Soil Sample</h2>
+  <button id="logoutBtn" style="float: right;">Logout</button>
+
+  <form id="soilForm">
+    
+    <fieldset>
+      <legend>Soil Sample</legend>
+      Sample Date: <input type="date" name="sample_date" required><br>
+      Sample Location (e.g., 'Field A'): <input name="sample_location" required><br>
+      Remarks: <textarea name="remarks"></textarea><br>
+    </fieldset>
+
+    <button type="submit">Send to Technician</button>
+  </form>
+
+  <hr>
+  <h2>My Recommendations</h2>
+  <div id="recommendationList">Loading...</div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Soil Testing & Recommendation System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <h1>AgroTech Innovators</h1>
+    <p>Empowering farmers through data-driven soil insights</p>
+    <nav>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </nav>
+  </header>
+
+  <section class="dashboard-container">
+    <a href="/farmer" class="dashboard-box farmer">
+      <h2>👨‍🌾 Farmer Dashboard</h2>
+      <p>Submit soil samples and view crop recommendations</p>
+    </a>
+    <a href="/technician" class="dashboard-box technician">
+      <h2>🧪 Technician Dashboard</h2>
+      <p>Record test parameters and manage sample data</p>
+    </a>
+    <a href="/admin" class="dashboard-box admin">
+      <h2>🛠️ Admin Dashboard</h2>
+      <p>Oversee crop and fertilizer databases</p>
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AgroTech Innovators | DBMS Mini Project</p>
+  </footer>
+</body>
+</html>

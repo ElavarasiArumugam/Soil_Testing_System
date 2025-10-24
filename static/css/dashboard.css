@@ -1,0 +1,255 @@
+/* dashboard.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 30px;
+  background-image: url('https://images.pexels.com/photos/1367243/pexels-photo-1367243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Light background image */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #162330; /* Default dark text color */
+}
+
+h2 {
+  color: #162330;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7); /* Light shadow for dark text */
+}
+
+/* Center the main content area on dashboard pages */
+.main-content {
+   max-width: 850px; /* Adjusted width */
+   margin: 20px auto;
+   padding: 25px;
+   background-color: rgba(255, 255, 255, 0.85); /* Slightly opaque white background */
+   border-radius: 8px;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Login/Register form container */
+.auth-container {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 30px; /* Add padding here */
+  background-color: rgba(255, 255, 255, 0.85); /* Consistent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.auth-container h2 {
+    text-align: center;
+    color: #162330; /* Ensure dark text */
+    text-shadow: none; /* Remove shadow if background is light */
+}
+
+.auth-container form {
+    background: none; /* Remove form background inside container */
+    padding: 0;
+    box-shadow: none;
+    font-weight: normal; /* Reset font weight */
+}
+
+.auth-container fieldset {
+    background-color: rgba(245, 245, 245, 0.7);
+    border: 1px solid #ccc;
+    color: #162330; /* Ensure dark text */
+}
+
+.auth-container legend {
+    color: #082745; /* Dark color */
+    text-shadow: none;
+}
+
+.auth-container label {
+    color: #082745; /* Dark color */
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.auth-container input {
+    background-color: #ffffff; /* Solid white input background */
+    color: #333; /* Dark text inside inputs */
+}
+
+.auth-container p {
+    text-align: center;
+    margin-top: 20px;
+    color: #333; /* Dark text */
+    text-shadow: none;
+}
+
+.auth-container p a {
+    color: #27ae60; /* Green link */
+    font-weight: bold;
+    text-shadow: none;
+}
+
+/* General Form Styles (Apply to all forms unless overridden) */
+form {
+  background-color: rgba(236, 240, 241, 0.85); /* Light grey with transparency */
+  padding: 20px;
+  border-radius: 8px;
+  color: #162330; /* Dark text */
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+fieldset {
+  border: 1px solid rgba(2, 2, 2, 0.3); /* Lighter border */
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  color: #162330;
+  background-color: rgba(245, 245, 245, 0.7);
+}
+
+legend {
+  font-weight: bold;
+  color: #082745;
+  padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #082745;
+    font-weight: bold;
+}
+
+input, textarea, select {
+  width: 100%; /* Default to full width */
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fff; /* Solid white background */
+  color: #333; /* Dark text inside */
+}
+
+textarea {
+    min-height: 80px;
+}
+
+button {
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #219150;
+}
+
+/* Styles specifically for inputs within the technician's test form */
+#testForm input,
+#testForm textarea,
+#testForm select { /* Added select just in case */
+  max-width: 400px; /* Limit max width for technician inputs */
+}
+
+/* Styles for lists like assigned samples or recommendations */
+#sampleList, #recommendationList, #sampleData {
+    margin-top: 20px;
+}
+
+/* Sample Card Style (Used in Farmer and Admin Dashboards) */
+.sample-card {
+  background-color: rgba(249, 249, 249, 0.9); /* Solid light grey, slightly transparent */
+  border: 1px solid #ddd;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  color: #333;
+  list-style-type: none;
+}
+
+.sample-card h4 {
+    color: #082745;
+    margin-bottom: 10px;
+}
+
+.sample-card p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.sample-card hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+/* Style for logout button */
+#logoutBtn {
+    background-color: #c0392b; /* Red color for logout */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+#logoutBtn:hover {
+    background-color: #a93226;
+}
+
+/* Clear float for elements after the button */
+h2 {
+    clear: both;
+}
+
+/* Admin Crop Table Styles */
+#cropTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.95); /* More opaque white background */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-size: 0.9em; /* Slightly smaller font for table */
+}
+
+#cropTable th,
+#cropTable td {
+    border: 1px solid #ddd;
+    padding: 8px 10px; /* Adjusted padding */
+    text-align: left;
+}
+
+#cropTable thead th {
+    background-color: #eaf2f8;
+    color: #34495e;
+    font-weight: bold;
+    position: sticky; /* Keep header visible on scroll */
+    top: 0;
+}
+
+#cropTable tbody tr:nth-child(even) {
+    background-color: #f8fafd;
+}
+
+#cropTable tbody tr:hover {
+    background-color: #e1ecf4;
+}
+
+#cropDataContainer h3 {
+    color: #162330;
+    margin-bottom: 10px;
+}
