@@ -40,17 +40,27 @@ Recommendations are generated
 Results are stored and displayed
 Run Locally
 1. Clone the repository
+
 git clone https://github.com/ElavarasiArumugam/Soil_Testing_System.git
 cd Soil_Testing_System/backend
+
 2. Create virtual environment
+
 python -m venv .venv
 .venv\Scripts\activate
+
 3. Install dependencies
+
 pip install -r requirements.txt
+
 4. Initialize database
+
 python db_init.py
+
 5. Run application
+
 python app.py
+
 6. Open in browser
 
 http://127.0.0.1:5000
