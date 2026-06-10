@@ -56,27 +56,6 @@ https://soil-testing-system.onrender.com
 
 ---
 
-## Run Locally
-
-## Clone the repository
-```bash
-git clone https://github.com/ElavarasiArumugam/Soil_Testing_System.git
-cd Soil_Testing_System/backend
-## Run Locally
-
-### Create virtual environment
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-Install dependencies
-pip install -r requirements.txt
-Initialize database
-python db_init.py
-Run application
-python app.py
-Open in browser
-
-http://127.0.0.1:5000
 
 Demo Credentials
 Admin
