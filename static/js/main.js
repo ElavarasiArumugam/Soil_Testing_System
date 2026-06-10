@@ -192,4 +192,77 @@ if (testForm) {
         }
     });
 }
+// ---------------- FARMER DASHBOARD ----------------
+
+const recommendationList =
+    document.getElementById("recommendationList");
+
+if (recommendationList) {
+    loadRecommendations();
+}
+
+async function loadRecommendations() {
+
+    try {
+
+        const res =
+            await fetch("/api/farmer/my_samples");
+
+        const samples = await res.json();
+
+        recommendationList.innerHTML = "";
+
+        if (samples.length === 0) {
+            recommendationList.innerHTML =
+                "<p>No recommendations available.</p>";
+            return;
+        }
+
+        samples.forEach(sample => {
+
+            recommendationList.innerHTML += `
+                <div class="sample-card">
+                    <h4>Sample ID: ${sample.id}</h4>
+
+                    <p>
+                        <strong>Date:</strong>
+                        ${sample.sample_date}
+                    </p>
+
+                    <p>
+                        <strong>Location:</strong>
+                        ${sample.sample_location}
+                    </p>
+
+                    <p>
+                        <strong>Status:</strong>
+                        ${sample.status}
+                    </p>
+
+                    <p>
+                        <strong>Crop:</strong>
+                        ${sample.recommended_crop || "Pending"}
+                    </p>
+
+                    <p>
+                        <strong>Fertilizer:</strong>
+                        ${sample.recommended_fertilizer || "Pending"}
+                    </p>
+
+                    <p>
+                        <strong>Notes:</strong>
+                        ${sample.recommendation_notes || "-"}
+                    </p>
+                </div>
+            `;
+        });
+
+    } catch (err) {
+
+        console.error(err);
+
+        recommendationList.innerHTML =
+            "<p>Failed to load recommendations.</p>";
+    }
+}
 });
