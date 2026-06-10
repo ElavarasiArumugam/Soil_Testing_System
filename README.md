@@ -56,34 +56,37 @@ https://soil-testing-system.onrender.com
 
 ---
 
+## Demo Credentials
 
-##Demo Credentials
-##Admin
-Email: admin@example.com
-Password: admin123
-##Farmer
-Email: farmer@example.com
-Password: farmer123
-##Technician
-Email: tech@example.com
-Password: tech123
+## Admin
+- Email: admin@example.com  
+- Password: admin123  
+
+## Farmer
+- Email: farmer@example.com  
+- Password: farmer123  
+
+## Technician
+- Email: tech@example.com  
+- Password: tech123  
 
 ---
 
-
-##Deployment
+## Deployment
 
 https://soil-testing-system.onrender.com
 
 ---
 
-##Future Improvements
--Machine learning-based crop prediction
--Weather-based recommendations
--REST API support
--Improved UI and dashboards
+## Future Improvements
+
+- Machine learning-based crop prediction  
+- Weather-based recommendations  
+- REST API support  
+- Improved UI and dashboards  
 
 ---
-##About
+
+## About
 
 A web application built using Flask and SQLite that connects farmers, technicians, and admins. It manages soil testing and generates automated crop and fertilizer recommendations.
