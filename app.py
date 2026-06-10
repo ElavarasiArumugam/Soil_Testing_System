@@ -1,4 +1,4 @@
-# app.py (COMPLETE AND UPDATED)
+# app.py 
 
 import os
 from flask import Flask, render_template, jsonify, redirect, url_for, session

@@ -18,7 +18,6 @@ def submit_sample():
         if not data:
             return jsonify({"error": "Missing data"}), 400
 
-        # --- KEY CHANGE ---
         # Get the farmer ID from the logged-in user session
         farmer_id = current_user.id
 

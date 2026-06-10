@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Farmer Dashboard</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <title>Farmer Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 </head>
 <body>
-  <h2>Submit Soil Sample</h2>
-  <button id="logoutBtn" style="float: right;">Logout</button>
+    <div class="main-content"> <h2>Submit Soil Sample</h2>
+        <button id="logoutBtn" style="float: right;">Logout</button>
 
-  <form id="soilForm">
-    
-    <fieldset>
-      <legend>Soil Sample</legend>
-      Sample Date: <input type="date" name="sample_date" required><br>
-      Sample Location (e.g., 'Field A'): <input name="sample_location" required><br>
-      Remarks: <textarea name="remarks"></textarea><br>
-    </fieldset>
+        <form id="soilForm" style="clear: both;"> <fieldset>
+                <legend>Soil Sample</legend>
 
-    <button type="submit">Send to Technician</button>
-  </form>
+                <label for="sample_date">Sample Date:</label>
+                <input type="date" id="sample_date" name="sample_date" required><br>
 
-  <hr>
-  <h2>My Recommendations</h2>
-  <div id="recommendationList">Loading...</div>
+                <label for="sample_location">Sample Location (e.g., 'Field A'):</label>
+                <input id="sample_location" name="sample_location" required><br>
 
-  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+                <label for="remarks">Remarks:</label>
+                <textarea id="remarks" name="remarks"></textarea><br>
+            </fieldset>
+            <button type="submit">Send to Technician</button>
+        </form>
+
+        <hr style="margin: 30px 0;"> <h2>My Recommendations</h2> <div id="recommendationList">Loading...</div>
+
+    </div> <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
