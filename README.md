@@ -59,7 +59,7 @@ https://soil-testing-system.onrender.com
 ## Demo Credentials
 
 ## Admin
-- Email: admin@example.com  
+- Email: admin@app.com  
 - Password: admin123  
 
 ## Farmer
@@ -67,7 +67,7 @@ https://soil-testing-system.onrender.com
 - Password: farmer123  
 
 ## Technician
-- Email: tech@example.com  
+- Email: tech@app.com  
 - Password: tech123  
 
 ---
